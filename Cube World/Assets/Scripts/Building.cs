@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Building : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Vector2Int Size = Vector2Int.one;
 
-    // Update is called once per frame
-    void Update()
+    private void OnDrawGizmos()
     {
-        
+        for (int x = 0; x < Size.x; x++)
+        {
+            for (int y = 0; y < Size.y; y++)
+            {
+                Gizmos.color = new Color(0, 1, 0, 03f);
+                Gizmos.DrawCube(transform.position + new Vector3(x, 0, y), new Vector3(1f, 0.1f, 1f));
+            }
+        }
     }
 }
