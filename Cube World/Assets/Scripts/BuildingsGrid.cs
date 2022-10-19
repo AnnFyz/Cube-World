@@ -27,6 +27,7 @@ public class BuildingsGrid : MonoBehaviour
         gridSize = new Vector2Int(xGridSize, yGridSize);
         grid = new Building[gridSize.x, gridSize.y];
         mainCamera = Camera.main;
+        Debug.Log("Grid Size: " + gridSize);
     }
 
     public void StartPlacingBuilding(Building buildingPrefab)
@@ -51,7 +52,7 @@ public class BuildingsGrid : MonoBehaviour
                 Vector3 worldPosition = ray.GetPoint(position); // position where Player clicked
                 int x = Mathf.RoundToInt(worldPosition.x);
                 int y = Mathf.RoundToInt(worldPosition.z);
-                Debug.Log(worldPosition);
+                
                 bool avialable = true;
                 //if (x < 0 || x > gridSize.x - flyingBuilding.Size.x) avialable = false; //checking doesn't work correct
                 //if (y < 0 || y > gridSize.y - flyingBuilding.Size.y) avialable = false;
@@ -60,6 +61,7 @@ public class BuildingsGrid : MonoBehaviour
 
                 if (avialable && Input.GetMouseButtonDown(0))
                 {
+                    Debug.Log(worldPosition);
                     PlaceFlyingBuilding(x,y);
                 }
             }

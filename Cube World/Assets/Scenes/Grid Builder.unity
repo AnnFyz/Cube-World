@@ -570,8 +570,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xGridSize: 10
-  yGridSize: 10
-  gridSize: {x: 0, y: 0}
+  yGridSize: 9
+  gridSize: {x: 20, y: 0}
 --- !u!4 &939721727
 Transform:
   m_ObjectHideFlags: 0
