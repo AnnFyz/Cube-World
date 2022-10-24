@@ -6,7 +6,7 @@ public class CameraRotator : MonoBehaviour
 {
     public float speed;
     public float moveSpeed;
-    public float ZoomSpeed = 50;
+    public float ZoomSpeed;
     Quaternion startRotation;
 
     [SerializeField] private Transform target;
